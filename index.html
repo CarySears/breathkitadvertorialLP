@@ -1,1 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catch Your Breath Kit | Sponsored Advertorial</title>
+    <meta
+      name="description"
+      content="An evidence-informed advertorial on breathing, air quality, and why better daily breathing habits matter. Learn about the Catch Your Breath Kit."
+    />
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --ink: #0f172a;
+        --muted: #475569;
+        --accent: #1d4ed8;
+        --accent-dark: #1e3a8a;
+        --card: #ffffff;
+        --border: #e2e8f0;
+        --highlight: #fef3c7;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .topbar {
+        background: #0b1220;
+        color: #e2e8f0;
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 20px 64px;
+      }
+      .hero {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      }
+      .hero h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.15;
+      }
+      .hero p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+      .taglist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        margin: 16px 0 22px;
+        list-style: none;
+      }
+      .taglist li {
+        background: #eef2ff;
+        color: #1e40af;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+      .cta:hover {
+        background: var(--accent-dark);
+        transform: translateY(-1px);
+      }
+      .cta.secondary {
+        background: #ffffff;
+        color: var(--accent-dark);
+        border: 2px solid var(--accent-dark);
+      }
+      .section {
+        margin-top: 36px;
+      }
+      .section h2 {
+        font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+        margin-bottom: 12px;
+      }
+      .section p {
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      }
+      .card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+      .callout {
+        background: var(--highlight);
+        border-left: 6px solid #f59e0b;
+        padding: 16px 18px;
+        border-radius: 12px;
+        margin: 18px 0;
+        color: #7c2d12;
+        font-weight: 600;
+      }
+      .stat {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .list {
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .list li {
+        margin-bottom: 8px;
+      }
+      .divider {
+        border-top: 1px solid var(--border);
+        margin: 30px 0;
+      }
+      .cta-band {
+        background: linear-gradient(120deg, #1e3a8a, #3b82f6);
+        color: #fff;
+        padding: 26px;
+        border-radius: 16px;
+        display: grid;
+        gap: 16px;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .cta-band p {
+        color: #e2e8f0;
+        margin: 0;
+      }
+      .fineprint {
+        font-size: 0.9rem;
+        color: #64748b;
+      }
+      .refs {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .refs li {
+        margin-bottom: 8px;
+      }
+      footer {
+        margin-top: 48px;
+        font-size: 0.85rem;
+        color: #94a3b8;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">Advertorial | Sponsored Content</div>
+    <div class="container">
+      <section class="hero">
+        <div>
+          <p><strong>Special report:</strong> Why so many people feel winded, wired, and worn down.</p>
+          <h1>Your body only has one non-negotiable: oxygen.</h1>
+          <p>
+            Sleep apnea, asthma, COPD, respiratory failure, and air pollution all
+            point to the same truth: when breathing falters, everything else does too.
+            The good news? Daily breathing habits can be trained, supported, and improved.
+          </p>
+          <ul class="taglist">
+            <li>Poor sleep</li>
+            <li>Air hunger</li>
+            <li>Pollution</li>
+            <li>Stress response</li>
+            <li>Shallow breathing</li>
+          </ul>
+          <a class="cta" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noreferrer">
+            Get the Catch Your Breath Kit
+          </a>
+          <p class="fineprint">
+            Sponsored by Catch Your Breath Kit. Educational content only. Not medical advice.
+          </p>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Quick takeaways</h3>
+            <ul class="list">
+              <li>Breathing problems often show up first as fatigue, confusion, and poor sleep.</li>
+              <li>Air quality, allergens, smoke, and stress all chip away at respiratory health.</li>
+              <li>Breath training is linked to calmer nervous system activity and better focus.</li>
+              <li>Small daily practices can build a foundation for steadier breathing.</li>
+            </ul>
+            <a class="cta secondary" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noreferrer">
+              Explore the kit
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <h2>Why breathing is the hidden bottleneck</h2>
+        <p>
+          When oxygen levels dip, the body responds fast. Conditions like acute respiratory
+          distress syndrome (ARDS) can lead to low blood oxygen, rapid breathing, and confusion.
+          Respiratory failure is often described as a feeling of "air hunger" and can bring headaches,
+          blurred vision, and fatigue. Even milder disruptions, like sleep apnea, can erode sleep quality
+          and mental clarity over time.
+        </p>
+        <div class="callout">
+          If your breathing is limited, every system downstream is limited too.
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Sleep apnea</h3>
+            <p>
+              Interrupted breathing during sleep can lead to poor rest and daytime confusion.
+              Treatments range from lifestyle changes to specialized devices.
+            </p>
+            <a href="https://www.nhlbi.nih.gov/health/sleep-apnea/causes" target="_blank" rel="noreferrer">
+              Causes and overview
+            </a>
+          </div>
+          <div class="card">
+            <h3>ARDS and emergency breathing care</h3>
+            <p>
+              ARDS can develop quickly or over days. Medical care may include oxygen therapy,
+              positioning strategies, or ventilation when oxygen levels are too low.
+            </p>
+            <a href="https://www.nhlbi.nih.gov/health/ards" target="_blank" rel="noreferrer">
+              ARDS overview
+            </a>
+          </div>
+          <div class="card">
+            <h3>Respiratory failure</h3>
+            <p>
+              High carbon dioxide levels can cause headaches, rapid breathing, and confusion.
+              The "air hunger" sensation signals the body is struggling to exchange gases.
+            </p>
+            <a
+              href="https://www.nhlbi.nih.gov/health/respiratory-failure"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Respiratory failure basics
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>The scope of the problem is bigger than most people realize</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="stat">1 in 13</div>
+            <p>People in the US have asthma, including many children and teens.</p>
+            <a href="https://www.nhlbi.nih.gov/health/asthma" target="_blank" rel="noreferrer">
+              Asthma overview
+            </a>
+          </div>
+          <div class="card">
+            <div class="stat">25M+</div>
+            <p>Americans are living with asthma, with higher risk in some communities.</p>
+            <a href="https://www.nhlbi.nih.gov/LMBBasthma" target="_blank" rel="noreferrer">
+              Live More Breathe Better
+            </a>
+          </div>
+          <div class="card">
+            <div class="stat">15M+</div>
+            <p>Adults in the US are affected by COPD, and many do not know it yet.</p>
+            <a href="https://www.nhlbi.nih.gov/health/copd" target="_blank" rel="noreferrer">
+              COPD summary
+            </a>
+          </div>
+          <div class="card">
+            <div class="stat">36%</div>
+            <p>Americans live in counties with unhealthy air pollution grades.</p>
+            <a href="https://www.lung.org/research/sota/key-findings" target="_blank" rel="noreferrer">
+              State of the Air report
+            </a>
+          </div>
+        </div>
+        <p class="fineprint">
+          Environmental and social factors influence breathing health. Data show higher asthma risks
+          and worse outcomes for communities facing unequal exposure to pollution and smoke.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Modern life makes breathing harder</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Air quality and smoke</h3>
+            <p>
+              Wildfire smoke and ozone pollution can make breathing difficult and aggravate asthma.
+              Long-term exposure raises risks for respiratory disease.
+            </p>
+            <a href="https://www.lung.org/research/sota/key-findings/ozone-pollution" target="_blank" rel="noreferrer">
+              Ozone pollution data
+            </a>
+          </div>
+          <div class="card">
+            <h3>Indoor irritants</h3>
+            <p>
+              Dust mites, mold, pet dander, and chemical fumes are common indoor triggers.
+              Many homes have measurable allergen levels.
+            </p>
+            <a
+              href="https://www.lung.org/clean-air/at-home/dust-briefing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Indoor dust briefing
+            </a>
+          </div>
+          <div class="card">
+            <h3>Smoking and secondhand smoke</h3>
+            <p>
+              Smoking is linked to heart and lung disease, and even secondhand smoke adds risk.
+              Many breathing disorders list avoidance as a first-line recommendation.
+            </p>
+            <a href="https://www.nhlbi.nih.gov/health/heart/smoking/risks" target="_blank" rel="noreferrer">
+              Smoking risks
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Research suggests breathing practices can help</h2>
+        <p>
+          Breath control is a common thread across stress reduction techniques. Clinical and academic
+          sources describe diaphragmatic breathing as a tool that may support stress, anxiety, and
+          respiratory comfort. A 2023 meta-analysis in Nature reports breathwork may improve stress and
+          mental health outcomes, while studies in Frontiers and Harvard Health describe slow breathing
+          as a way to influence the nervous system.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Diaphragmatic breathing</h3>
+            <p>
+              Cleveland Clinic highlights diaphragmatic breathing for stress and breathing disorders.
+            </p>
+            <a href="https://my.clevelandclinic.org/health/articles/9445-diaphragmatic-breathing" target="_blank" rel="noreferrer">
+              Cleveland Clinic guide
+            </a>
+          </div>
+          <div class="card">
+            <h3>Breath and relaxation response</h3>
+            <p>
+              Harvard Health notes breath focus as a reliable path to the relaxation response.
+            </p>
+            <a
+              href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Harvard Health summary
+            </a>
+          </div>
+          <div class="card">
+            <h3>Breathwork research</h3>
+            <p>
+              Nature and Frontiers studies report potential benefits for stress, heart-rate variability,
+              and emotional regulation.
+            </p>
+            <a href="https://www.nature.com/articles/s41598-022-27247-y" target="_blank" rel="noreferrer">
+              Nature meta-analysis
+            </a>
+          </div>
+        </div>
+        <p class="fineprint">
+          Everyone is different. If breath-focused practices trigger discomfort or panic, it is wise to
+          use a gentler approach and seek professional guidance.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>So what can you do today?</h2>
+        <div class="card">
+          <ul class="list">
+            <li>Start with short sessions: 3 to 5 minutes of slow nasal breathing.</li>
+            <li>Lengthen the exhale slightly to support a calmer nervous system response.</li>
+            <li>Build daily consistency instead of pushing intensity.</li>
+            <li>Reduce exposure to smoke, allergens, and poor air quality when possible.</li>
+            <li>Prioritize sleep, hydration, and movement to support respiratory health.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-band">
+          <div>
+            <h2>Introducing the Catch Your Breath Kit</h2>
+            <p>
+              A guided, step-by-step breathing program designed to help you build a simple daily
+              ritual for calmer, more efficient breathing. No complicated equipment. No overwhelm.
+              Just practical routines you can fit into real life.
+            </p>
+          </div>
+          <div>
+            <a class="cta" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noreferrer">
+              Get instant access
+            </a>
+            <p class="fineprint">
+              See full details, what is included, and how it works on the next page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Who this is for</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Busy adults</h3>
+            <p>Anyone who feels stressed, tense, or short on energy and wants a grounded daily reset.</p>
+          </div>
+          <div class="card">
+            <h3>People exposed to irritants</h3>
+            <p>Those living around pollution, smoke, or indoor allergens who want better habits.</p>
+          </div>
+          <div class="card">
+            <h3>Anyone ready to breathe better</h3>
+            <p>A practical starting point for learning ideal breathing mechanics and awareness.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>FAQ</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Is this a medical treatment?</h3>
+            <p>
+              No. The Catch Your Breath Kit is educational and does not diagnose, treat, or cure any
+              disease. Always consult a clinician for medical concerns.
+            </p>
+          </div>
+          <div class="card">
+            <h3>How long does it take?</h3>
+            <p>Start with a few minutes a day. Consistency matters more than long sessions.</p>
+          </div>
+          <div class="card">
+            <h3>What if I already have a condition?</h3>
+            <p>
+              People with asthma, COPD, sleep apnea, or other conditions should follow professional
+              care plans and use breathing practices as supportive habits only.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Ready to rebuild your breathing foundation?</h2>
+        <p>
+          The evidence is clear: breathing is central to everything else. When you take control of it,
+          you build a calmer baseline for sleep, focus, and daily resilience.
+        </p>
+        <a class="cta" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noreferrer">
+          Yes, show me the Catch Your Breath Kit
+        </a>
+        <p class="fineprint">
+          This advertorial is not medical advice. If you experience severe symptoms such as difficulty
+          breathing, seek medical help immediately.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>References and further reading</h2>
+        <ul class="refs">
+          <li><a href="https://www.nhlbi.nih.gov/health/sleep-apnea/causes" target="_blank" rel="noreferrer">Sleep apnea overview (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/ards" target="_blank" rel="noreferrer">ARDS overview and symptoms (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/ards/treatment" target="_blank" rel="noreferrer">ARDS treatment and oxygen therapy (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/ventilator" target="_blank" rel="noreferrer">Ventilator basics (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/respiratory-failure" target="_blank" rel="noreferrer">Respiratory failure and air hunger (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/respiratory-failure/causes" target="_blank" rel="noreferrer">Respiratory failure causes and irritants (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/asthma" target="_blank" rel="noreferrer">Asthma overview (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/LMBBasthma" target="_blank" rel="noreferrer">Live More Breathe Better asthma data</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/copd" target="_blank" rel="noreferrer">COPD overview (NHLBI)</a></li>
+          <li><a href="https://www.lung.org/research/sota/key-findings" target="_blank" rel="noreferrer">State of the Air key findings</a></li>
+          <li><a href="https://www.lung.org/clean-air/at-home/dust-briefing" target="_blank" rel="noreferrer">Indoor dust and allergens (ALA)</a></li>
+          <li><a href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response" target="_blank" rel="noreferrer">Harvard Health on breath control</a></li>
+          <li><a href="https://my.clevelandclinic.org/health/articles/9445-diaphragmatic-breathing" target="_blank" rel="noreferrer">Cleveland Clinic diaphragmatic breathing</a></li>
+          <li><a href="https://www.nature.com/articles/s41598-022-27247-y" target="_blank" rel="noreferrer">Nature meta-analysis on breathwork</a></li>
+          <li><a href="https://www.frontiersin.org/articles/10.3389/fnhum.2018.00353/full" target="_blank" rel="noreferrer">Frontiers slow breathing study</a></li>
+          <li><a href="https://www.cdc.gov/asthma/most_recent_national_asthma_data.htm" target="_blank" rel="noreferrer">CDC asthma data</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/newborn-breathing-conditions" target="_blank" rel="noreferrer">Newborn breathing conditions (NHLBI)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/pulmonary-rehabilitation" target="_blank" rel="noreferrer">Pulmonary rehabilitation overview</a></li>
+          <li><a href="https://airquality.weather.gov/" target="_blank" rel="noreferrer">Air quality maps (AirNow)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/heart/smoking/risks" target="_blank" rel="noreferrer">Smoking risks (NHLBI)</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        Sponsored content. This page is for informational purposes only.
+      </footer>
+    </div>
+  </body>
+</html>
