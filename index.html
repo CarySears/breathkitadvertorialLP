@@ -1,1 +1,989 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
 
+    <title>Special Report: The Breath Problem Hiding in Plain Sight</title>
+    <meta
+      name="description"
+      content="An evidence-informed advertorial on breathing, sleep, air quality, and stress—plus a simple way to practice better breathing at home."
+    />
+
+    <meta property="og:title" content="Special Report: The Breath Problem Hiding in Plain Sight" />
+    <meta
+      property="og:description"
+      content="What low oxygen, air ‘hunger,’ and modern air quality have in common—and the simple practice most people overlook."
+    />
+    <meta property="og:type" content="website" />
+
+    <style>
+      :root {
+        --bg: #070b14;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.08);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --faint: rgba(255, 255, 255, 0.58);
+        --line: rgba(255, 255, 255, 0.14);
+        --accent: #7cfecc;
+        --accent2: #6aa7ff;
+        --warning: #ffd18a;
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+        --radius: 18px;
+        --radius2: 26px;
+        --max: 1060px;
+        --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(1000px 650px at 15% 10%, rgba(106, 167, 255, 0.17), transparent 60%),
+          radial-gradient(900px 700px at 85% 0%, rgba(124, 254, 204, 0.14), transparent 55%),
+          radial-gradient(800px 700px at 70% 95%, rgba(255, 209, 138, 0.07), transparent 55%), var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(12px);
+        background: linear-gradient(to bottom, rgba(7, 11, 20, 0.9), rgba(7, 11, 20, 0.65));
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbarInner {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+      }
+
+      .badgeRow {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        padding: 8px 10px;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 4px rgba(124, 254, 204, 0.12);
+      }
+
+      .topCTA {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .btn {
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+        font-weight: 650;
+        letter-spacing: 0.01em;
+        padding: 11px 14px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(124, 254, 204, 1), rgba(106, 167, 255, 1));
+        color: rgba(7, 11, 20, 0.95);
+        box-shadow: 0 14px 45px rgba(106, 167, 255, 0.22);
+        text-decoration: none;
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+      }
+
+      .btn:focus {
+        outline: 3px solid rgba(124, 254, 204, 0.28);
+        outline-offset: 3px;
+      }
+
+      .btnSecondary {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--line);
+        color: var(--text);
+        box-shadow: none;
+      }
+
+      .btnSmall {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      header.hero {
+        padding: 44px 0 18px;
+      }
+
+      .heroGrid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      @media (max-width: 920px) {
+        .heroGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .kicker {
+        color: var(--muted);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 12px;
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 12px 0 12px;
+        font-family: var(--serif);
+        line-height: 1.06;
+        font-weight: 780;
+        font-size: clamp(34px, 4.2vw, 56px);
+        letter-spacing: -0.02em;
+      }
+
+      .subhead {
+        color: var(--muted);
+        font-size: 18px;
+        margin: 0 0 18px;
+        max-width: 62ch;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius2);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
+        box-shadow: var(--shadow);
+      }
+
+      .cardPad {
+        padding: 18px;
+      }
+
+      .bullets {
+        margin: 14px 0 18px;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .bullets li {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: 10px;
+        align-items: start;
+        color: var(--muted);
+      }
+
+      .check {
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        margin-top: 2px;
+        background: rgba(124, 254, 204, 0.18);
+        border: 1px solid rgba(124, 254, 204, 0.34);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      .panelTitle {
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        margin: 0 0 10px;
+      }
+
+      .fineprint {
+        color: var(--faint);
+        font-size: 12px;
+        margin: 10px 0 0;
+      }
+
+      main {
+        padding: 12px 0 88px;
+      }
+
+      section {
+        margin: 18px 0;
+      }
+
+      .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 18px;
+        align-items: start;
+      }
+
+      @media (max-width: 980px) {
+        .contentGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .article {
+        padding: 22px;
+      }
+
+      .article h2 {
+        margin: 0 0 10px;
+        font-family: var(--serif);
+        font-size: clamp(24px, 2.4vw, 32px);
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+      }
+
+      .article h3 {
+        margin: 18px 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+
+      .article p {
+        margin: 10px 0;
+        color: var(--muted);
+      }
+
+      .pull {
+        margin: 16px 0;
+        padding: 14px 14px;
+        border-left: 3px solid rgba(124, 254, 204, 0.55);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .pull strong {
+        color: var(--text);
+      }
+
+      .side {
+        position: sticky;
+        top: 72px;
+      }
+
+      @media (max-width: 980px) {
+        .side {
+          position: static;
+        }
+      }
+
+      .side .cardPad {
+        padding: 16px;
+      }
+
+      .miniList {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .miniList li {
+        margin: 6px 0;
+      }
+
+      .hr {
+        height: 1px;
+        background: var(--line);
+        margin: 16px 0;
+      }
+
+      .breathBox {
+        display: grid;
+        gap: 10px;
+      }
+
+      .breathTimer {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: rgba(0, 0, 0, 0.18);
+      }
+
+      .timerRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .timerState {
+        font-weight: 850;
+        letter-spacing: 0.01em;
+      }
+
+      .timerBig {
+        font-family: var(--serif);
+        font-weight: 850;
+        font-size: 36px;
+        letter-spacing: -0.02em;
+      }
+
+      .progress {
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+
+      .bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+      }
+
+      .ctaCard {
+        border: 1px solid rgba(124, 254, 204, 0.32);
+        background: linear-gradient(180deg, rgba(124, 254, 204, 0.12), rgba(255, 255, 255, 0.04));
+      }
+
+      .ctaTitle {
+        font-family: var(--serif);
+        font-size: 22px;
+        line-height: 1.15;
+        margin: 0 0 8px;
+      }
+
+      .ctaText {
+        color: var(--muted);
+        margin: 0 0 12px;
+      }
+
+      .sources a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      }
+
+      .sources a:hover {
+        border-bottom-color: rgba(124, 254, 204, 0.75);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 22px 0 90px;
+        color: var(--faint);
+      }
+
+      .footerGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .stickyCta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        padding: 10px 0;
+        background: linear-gradient(to top, rgba(7, 11, 20, 0.92), rgba(7, 11, 20, 0.55));
+        border-top: 1px solid var(--line);
+        backdrop-filter: blur(12px);
+      }
+
+      .stickyInner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .stickyCopy {
+        display: grid;
+        gap: 2px;
+      }
+
+      .stickyCopy strong {
+        font-weight: 850;
+        letter-spacing: -0.01em;
+      }
+
+      .stickyCopy span {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      @media (min-width: 980px) {
+        .stickyCta {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar" role="banner">
+      <div class="container">
+        <div class="topbarInner">
+          <div class="badgeRow">
+            <span class="badge"><span class="dot" aria-hidden="true"></span> Advertorial</span>
+            <span class="badge" id="pubLine">Health &amp; Wellness Desk · <span id="today"></span></span>
+          </div>
+          <div class="topCTA">
+            <a class="btn btnSecondary btnSmall" href="#sources">Sources</a>
+            <a class="btn btnSmall" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noopener"
+              >Get the Breath Kit →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div>
+            <div class="kicker">Special report</div>
+            <h1>The breath problem hiding in plain sight (and why it shows up as fatigue, fog, and stress)</h1>
+            <p class="subhead">
+              Here’s the uncomfortable truth: when your breathing gets “off,” your whole day can feel off—sleep, focus,
+              mood, even how safe your body feels. The good news? There’s a practical way to retrain the basics at home.
+            </p>
+
+            <ul class="bullets">
+              <li><span class="check" aria-hidden="true">✓</span> What “air hunger” really means—and why it matters</li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span> The modern triggers most people ignore: stress, indoor
+                air, smoke, and shallow breathing habits
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span> A simple 2‑minute breathing drill you can try right now
+                (no equipment)
+              </li>
+            </ul>
+
+            <div class="topCTA" style="gap: 12px; flex-wrap: wrap">
+              <a class="btn" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noopener"
+                >Yes—Show Me the Breath Kit →</a
+              >
+              <a class="btn btnSecondary" href="#try">Try the 2‑minute reset</a>
+            </div>
+            <p class="fineprint">
+              This page is for educational purposes only and does not provide medical advice. If you have breathing
+              problems, chest pain, severe anxiety/panic, or a medical condition, consult a clinician.
+            </p>
+          </div>
+
+          <aside class="card cardPad" aria-label="Quick summary">
+            <div class="panelTitle">If any of this sounds familiar…</div>
+            <ul class="miniList">
+              <li>You wake up unrefreshed (even after “enough” hours)</li>
+              <li>You breathe through your mouth when stressed or focused</li>
+              <li>You get the feeling you “can’t get a full breath”</li>
+              <li>You’re around smoke, allergens, or polluted air more than you’d like</li>
+            </ul>
+            <div class="hr" aria-hidden="true"></div>
+            <p class="fineprint" style="margin: 0">
+              You don’t need perfection. You need a repeatable system—small reps that rebuild the baseline.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="contentGrid">
+          <article class="card article" role="main">
+            <h2>Breathing isn’t “just” breathing—it’s the foundation</h2>
+            <p>
+              Your body has one non‑negotiable requirement: <strong>enough oxygen in the blood</strong> and
+              <strong>healthy carbon dioxide balance</strong>. When either gets disrupted, the effects often look like
+              “everything else”—poor sleep, tiredness, confusion, headaches, rapid breathing, or a general sense that
+              something feels wrong.
+            </p>
+
+            <div class="pull">
+              <strong>One key takeaway from respiratory medicine:</strong> low oxygen and poor ventilation aren’t
+              subtle—common symptom lists include shortness of breath, rapid breathing, tiredness, and even confusion.
+              (See sources from NHLBI and related health agencies below.)
+            </div>
+
+            <h3>Why this matters more than you think</h3>
+            <p>
+              Conditions like <strong>sleep apnea</strong> can disrupt normal breathing during sleep, contributing to
+              poor rest and downstream cognitive effects. Severe lung issues like <strong>ARDS</strong> can lower blood
+              oxygen and escalate quickly—sometimes within days—creating serious risk if untreated. And respiratory
+              failure can produce a specific sensation clinicians literally call <strong>“air hunger”</strong>—the
+              feeling you can’t get enough air—along with symptoms linked to elevated carbon dioxide.
+            </p>
+
+            <p>
+              The point is not to scare you. It’s to show something most people were never taught:
+              <strong>when breathing is compromised, everything else has to work harder.</strong>
+            </p>
+
+            <h3>The modern breath trap: stress + habits + air</h3>
+            <p>
+              Many of us spend more time indoors than we realize. Indoor allergens (like dust mites and mold), outdoor
+              pollution, wildfire smoke events, and secondhand smoke can all stress the respiratory system—especially in
+              people with allergies or asthma. Meanwhile, the “flat stomach” posture and chronic tension pattern can
+              nudge people toward shallow, chest‑dominant breathing, which may amplify stress responses.
+            </p>
+
+            <div class="pull">
+              <strong>Here’s the strategy shift:</strong> if your environment and stress are pushing your breath into
+              “short and high,” your counter‑move is a repeatable practice that trains “low and slow”—without forcing.
+            </div>
+
+            <h3>What the research says about breathwork (in plain English)</h3>
+            <p>
+              Breathwork and diaphragmatic breathing show promising evidence for improving stress and aspects of mental
+              health—while credible reviews also emphasize a need for better study designs and cautious interpretation.
+              In other words: there’s signal, there’s nuance, and there’s a right way to approach it.
+            </p>
+            <p>
+              That “right way” is simple: start with gentle basics, prioritize safety, and use structure so you don’t
+              have to rely on motivation.
+            </p>
+
+            <section id="try" class="card" style="margin-top: 18px">
+              <div class="cardPad">
+                <h2 style="margin: 0 0 8px">Try this 2‑minute “downshift” breathing reset</h2>
+                <p style="margin: 0 0 12px; color: var(--muted)">
+                  If focusing on the breath makes you uncomfortable, stop. Keep it gentle. No breath holds. No forcing.
+                  The goal is a slightly longer exhale to support relaxation.
+                </p>
+
+                <div class="breathBox">
+                  <div class="breathTimer" aria-live="polite">
+                    <div class="timerRow">
+                      <div>
+                        <div class="timerState" id="phase">Ready</div>
+                        <div class="fineprint" style="margin: 2px 0 0">
+                          Pattern: inhale 4s · exhale 6s (repeat)
+                        </div>
+                      </div>
+                      <div class="timerBig" id="count">2:00</div>
+                    </div>
+                    <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
+                    <div class="timerRow">
+                      <button class="btn btnSecondary btnSmall" id="start" type="button">Start</button>
+                      <button class="btn btnSecondary btnSmall" id="reset" type="button">Reset</button>
+                      <a
+                        class="btn btnSmall"
+                        href="https://catchyourbreathkit.netlify.app/"
+                        target="_blank"
+                        rel="noopener"
+                        >Get the full Breath Kit →</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="fineprint">
+                    Tip: breathe through your nose if comfortable. Keep your shoulders relaxed and let the belly soften
+                    on the inhale.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <h3>So what’s the best next step?</h3>
+            <p>
+              Most people don’t need another motivational speech—they need a plan that’s easy to follow on a real
+              Tuesday.
+            </p>
+            <p>
+              That’s why we recommend a guided approach:
+              <strong>short, structured sessions that rebuild breathing fundamentals</strong> (especially for sleep,
+              stress, and daily resilience) while keeping it safe and approachable.
+            </p>
+
+            <div class="pull">
+              <strong>Bottom line:</strong> if you can breathe, train it. When you practice the basics consistently,
+              you’re investing in the “baseline” your body uses for everything else.
+            </div>
+
+            <section class="card ctaCard" style="margin-top: 18px">
+              <div class="cardPad">
+                <p class="ctaTitle">Get the Catch Your Breath Kit</p>
+                <p class="ctaText">
+                  A simple, step‑by‑step system for practicing better breathing at home—without overcomplicating it.
+                </p>
+                <div class="topCTA" style="gap: 10px; flex-wrap: wrap">
+                  <a class="btn" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noopener"
+                    >Go to the Breath Kit Page →</a
+                  >
+                  <a class="btn btnSecondary" href="#sources">Review the sources first</a>
+                </div>
+                <p class="fineprint" style="margin-top: 10px">
+                  Not medical advice. If you suspect sleep apnea, asthma, COPD, or other respiratory conditions, seek
+                  professional evaluation.
+                </p>
+              </div>
+            </section>
+
+            <section id="faq" style="margin-top: 18px">
+              <div class="card cardPad">
+                <h2 style="margin: 0 0 10px">FAQ (quick, honest answers)</h2>
+
+                <h3 style="margin-top: 0">Is this the same as oxygen therapy?</h3>
+                <p style="margin: 8px 0; color: var(--muted)">
+                  No. Oxygen therapy is a medical treatment used when blood oxygen levels are too low and should be
+                  guided by clinicians. Breath training is about improving breathing mechanics and patterns—not
+                  replacing medical care.
+                </p>
+
+                <h3>Can breathing exercises help with stress?</h3>
+                <p style="margin: 8px 0; color: var(--muted)">
+                  Many relaxation methods include breath focus, and research suggests breathwork can improve stress and
+                  aspects of mental health for some people—while emphasizing nuance and the need for high‑quality
+                  studies.
+                </p>
+
+                <h3>Who should be careful?</h3>
+                <p style="margin: 8px 0; color: var(--muted)">
+                  If you have severe respiratory disease, panic disorder triggered by breath focus, are pregnant, or
+                  have any condition where breath practices feel unsafe, talk to a clinician and keep practices gentle.
+                  Stop if you feel dizzy, numb, or distressed.
+                </p>
+              </div>
+            </section>
+
+            <section id="sources" class="sources" style="margin-top: 18px">
+              <div class="card cardPad">
+                <h2 style="margin: 0 0 10px">Sources &amp; further reading</h2>
+                <p style="margin: 0 0 10px; color: var(--muted)">
+                  We used the following public health and research resources to inform this advertorial:
+                </p>
+                <ul class="miniList" style="margin-top: 0">
+                  <li>
+                    NHLBI — Sleep apnea causes:
+                    <a href="https://www.nhlbi.nih.gov/health/sleep-apnea/causes" target="_blank" rel="noopener"
+                      >nhlbi.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — ARDS overview:
+                    <a href="https://www.nhlbi.nih.gov/health/ards" target="_blank" rel="noopener">nhlbi.nih.gov</a>
+                  </li>
+                  <li>
+                    NHLBI — ARDS treatment (oxygen therapy / positioning / ventilation support):
+                    <a href="https://www.nhlbi.nih.gov/health/ards/treatment" target="_blank" rel="noopener"
+                      >nhlbi.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — Ventilator:
+                    <a href="https://www.nhlbi.nih.gov/health/ventilator" target="_blank" rel="noopener"
+                      >nhlbi.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — Respiratory failure (including “air hunger”):
+                    <a href="https://www.nhlbi.nih.gov/health/respiratory-failure" target="_blank" rel="noopener"
+                      >nhlbi.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — Respiratory failure causes (lung irritants, smoke, and more):
+                    <a
+                      href="https://www.nhlbi.nih.gov/health/respiratory-failure/causes"
+                      target="_blank"
+                      rel="noopener"
+                      >nhlbi.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — Asthma overview:
+                    <a href="https://www.nhlbi.nih.gov/health/asthma" target="_blank" rel="noopener">nhlbi.nih.gov</a>
+                  </li>
+                  <li>
+                    CDC — Asthma data:
+                    <a href="https://www.cdc.gov/asthma/most_recent_national_asthma_data.htm" target="_blank" rel="noopener"
+                      >cdc.gov</a
+                    >
+                  </li>
+                  <li>
+                    NHLBI — Learn More Breathe Better (asthma):
+                    <a href="https://www.nhlbi.nih.gov/LMBBasthma" target="_blank" rel="noopener">nhlbi.nih.gov</a>
+                  </li>
+                  <li>
+                    NHLBI — COPD overview:
+                    <a href="https://www.nhlbi.nih.gov/health/copd" target="_blank" rel="noopener">nhlbi.nih.gov</a>
+                  </li>
+                  <li>
+                    American Lung Association — Indoor dust brief:
+                    <a href="https://www.lung.org/clean-air/at-home/dust-briefing" target="_blank" rel="noopener"
+                      >lung.org</a
+                    >
+                  </li>
+                  <li>
+                    American Lung Association — State of the Air key findings:
+                    <a href="https://www.lung.org/research/sota/key-findings" target="_blank" rel="noopener"
+                      >lung.org</a
+                    >
+                  </li>
+                  <li>
+                    Harvard Health — Breath control and relaxation response:
+                    <a
+                      href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response"
+                      target="_blank"
+                      rel="noopener"
+                      >health.harvard.edu</a
+                    >
+                  </li>
+                  <li>
+                    Nature (2023) — Meta-analysis on breathwork and mental health:
+                    <a href="https://www.nature.com/articles/s41598-022-27247-y" target="_blank" rel="noopener"
+                      >nature.com</a
+                    >
+                  </li>
+                  <li>
+                    Frontiers (2018) — Slow breathing and autonomic/cerebral mechanisms:
+                    <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2018.00353/full" target="_blank" rel="noopener"
+                      >frontiersin.org</a
+                    >
+                  </li>
+                  <li>
+                    NCBI (2017) — Diaphragmatic breathing and attention/affect/cortisol:
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5455070/" target="_blank" rel="noopener"
+                      >ncbi.nlm.nih.gov</a
+                    >
+                  </li>
+                  <li>
+                    VA Whole Health — Diaphragmatic breathing overview:
+                    <a
+                      href="https://www.va.gov/WHOLEHEALTHLIBRARY/tools/diaphragmatic-breathing.asp"
+                      target="_blank"
+                      rel="noopener"
+                      >va.gov</a
+                    >
+                  </li>
+                </ul>
+                <p class="fineprint" style="margin-top: 12px">
+                  Note: Some sources discuss serious medical conditions. If you have symptoms like severe shortness of
+                  breath, chest pain, blue lips/face, confusion, or sudden worsening, seek urgent medical care.
+                </p>
+              </div>
+            </section>
+          </article>
+
+          <aside class="side" aria-label="Sidebar">
+            <div class="card cardPad ctaCard">
+              <p class="ctaTitle" style="margin-bottom: 6px">A simple next step</p>
+              <p class="ctaText" style="margin-bottom: 10px">
+                If you want structure (and you’ll actually use it), start here.
+              </p>
+              <a class="btn" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noopener"
+                >Open the Breath Kit →</a
+              >
+              <p class="fineprint">
+                Best results come from consistency—short sessions you can repeat, not heroic “one‑and‑done” efforts.
+              </p>
+            </div>
+
+            <div class="card cardPad" style="margin-top: 14px">
+              <div class="panelTitle">Quick safety checklist</div>
+              <ul class="miniList">
+                <li>Keep it gentle—no forcing or pain</li>
+                <li>Stop if you feel dizzy, numb, or panicky</li>
+                <li>If you suspect sleep apnea or asthma, get evaluated</li>
+                <li>Use this as practice, not treatment</li>
+              </ul>
+            </div>
+
+            <div class="card cardPad" style="margin-top: 14px">
+              <div class="panelTitle">Micro‑wins to notice</div>
+              <ul class="miniList">
+                <li>Exhale feels easier</li>
+                <li>Shoulders drop without thinking</li>
+                <li>Less “air hunger” during stress</li>
+                <li>More calm after 2 minutes</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footerGrid">
+          <div>
+            <strong>Disclosure:</strong> This is an advertorial. It may link to a product page. Content is educational
+            and not a substitute for professional medical advice, diagnosis, or treatment.
+          </div>
+          <div class="fineprint">
+            © <span id="year"></span> · All rights reserved. Always consult qualified health providers regarding a
+            medical condition.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="stickyCta" role="contentinfo" aria-label="Sticky call to action">
+      <div class="container">
+        <div class="stickyInner">
+          <div class="stickyCopy">
+            <strong>Ready for a simple breathing plan?</strong>
+            <span>Open the Catch Your Breath Kit (new tab)</span>
+          </div>
+          <a class="btn" href="https://catchyourbreathkit.netlify.app/" target="_blank" rel="noopener">Get it →</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const now = new Date();
+        const today = new Intl.DateTimeFormat(undefined, { year: "numeric", month: "short", day: "numeric" }).format(
+          now,
+        );
+        const year = new Intl.DateTimeFormat(undefined, { year: "numeric" }).format(now);
+        const todayEl = document.getElementById("today");
+        const yearEl = document.getElementById("year");
+        if (todayEl) todayEl.textContent = today;
+        if (yearEl) yearEl.textContent = year;
+      })();
+
+      (function () {
+        const startBtn = document.getElementById("start");
+        const resetBtn = document.getElementById("reset");
+        const phaseEl = document.getElementById("phase");
+        const countEl = document.getElementById("count");
+        const barEl = document.getElementById("bar");
+
+        if (!startBtn || !resetBtn || !phaseEl || !countEl || !barEl) return;
+
+        const totalSeconds = 120;
+        const inhale = 4;
+        const exhale = 6;
+        const cycle = inhale + exhale;
+
+        let t = totalSeconds;
+        let interval = null;
+        let running = false;
+
+        function fmt(seconds) {
+          const m = Math.floor(seconds / 60);
+          const s = seconds % 60;
+          return `${m}:${String(s).padStart(2, "0")}`;
+        }
+
+        function phaseFor(remaining) {
+          const elapsed = totalSeconds - remaining;
+          const within = elapsed % cycle;
+          if (within < inhale) return { label: "Inhale (gently)", pct: (within / inhale) * 100, mode: "inhale" };
+          const ex = within - inhale;
+          return { label: "Exhale (longer)", pct: (ex / exhale) * 100, mode: "exhale" };
+        }
+
+        function tick() {
+          if (t <= 0) {
+            clearInterval(interval);
+            interval = null;
+            running = false;
+            startBtn.textContent = "Start";
+            phaseEl.textContent = "Done — notice how you feel";
+            barEl.style.width = "100%";
+            return;
+          }
+
+          const p = phaseFor(t);
+          phaseEl.textContent = p.label;
+          countEl.textContent = fmt(t);
+
+          const progress = ((totalSeconds - t) / totalSeconds) * 100;
+          barEl.style.width = `${progress.toFixed(2)}%`;
+
+          t -= 1;
+        }
+
+        function start() {
+          if (running) return;
+          running = true;
+          startBtn.textContent = "Running…";
+          tick();
+          interval = setInterval(tick, 1000);
+        }
+
+        function stop() {
+          if (!interval) return;
+          clearInterval(interval);
+          interval = null;
+          running = false;
+          startBtn.textContent = "Resume";
+        }
+
+        function reset() {
+          if (interval) clearInterval(interval);
+          interval = null;
+          running = false;
+          t = totalSeconds;
+          phaseEl.textContent = "Ready";
+          countEl.textContent = fmt(totalSeconds);
+          barEl.style.width = "0%";
+          startBtn.textContent = "Start";
+        }
+
+        startBtn.addEventListener("click", function () {
+          if (running) stop();
+          else start();
+        });
+        resetBtn.addEventListener("click", reset);
+
+        reset();
+      })();
+    </script>
+  </body>
+</html>
